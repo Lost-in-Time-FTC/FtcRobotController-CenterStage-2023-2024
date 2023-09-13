@@ -12,24 +12,13 @@ import com.qualcomm.robotcore.util.Range;
 
 public class LiTDrive extends LinearOpMode {
     private Hardware hardware;
-    // Declare OpMode members
     private final ElapsedTime runtime = new ElapsedTime();
-    // TouchSensor touchSensor;
-//    private DcMotor frontLeftMotor = null;
-//    private DcMotor frontRightMotor = null;
-//    private DcMotor backLeftMotor = null;
-//    private DcMotor backRightMotor = null;
 
     public void runOpMode() {
         Gamepad currentGamepad2 = new Gamepad();
         Gamepad previousGamepad2 = new Gamepad();
 
         hardware = new Hardware(hardwareMap);
-
-//        frontRightMotor = hardwareMap.get(DcMotor.class, "frontRightMotor");
-//        frontLeftMotor = hardwareMap.get(DcMotor.class, "frontLeftMotor");
-//        backRightMotor = hardwareMap.get(DcMotor.class, "backRightMotor");
-//        backLeftMotor = hardwareMap.get(DcMotor.class, "backLeftMotor");
 
         hardware.backLeftMotor.setDirection(DcMotor.Direction.FORWARD);
         hardware.backRightMotor.setDirection(DcMotor.Direction.REVERSE);
